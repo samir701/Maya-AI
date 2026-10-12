@@ -4,6 +4,10 @@ __pycache__/
 *$py.class
 *.so
 .Python
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
 env/
 build/
 develop-eggs/
@@ -37,6 +41,14 @@ data/cache/*
 !data/cache/.gitkeep
 data/temporary/*
 !data/temporary/.gitkeep
+/core/data/database/*.db
+/core/data/database/*.sqlite3
+/core/data/logs/*
+!/core/data/logs/.gitkeep
+/data/models/
+/runtime/browser/
+/runtime/captures/
+*.log
 
 # Environment variables & secrets
 .env

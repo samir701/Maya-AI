@@ -1,1 +1,41 @@
-# Placeholder
+from core.zetta.utils.errors.exceptions import (
+    ZettaError,
+    ConfigurationError,
+    AuthenticationError,
+    AuthorizationError,
+    ValidationError,
+    ToolError,
+    AgentError,
+    TaskError,
+    BrowserError,
+    IntegrationError,
+    RateLimitError,
+    TimeoutError,
+    SecurityError,
+    SandboxError,
+    NotFoundError,
+    RegistrationError,
+    ExecutionError,
+)
+
+__all__ = [
+    "ZettaError",
+    "ConfigurationError",
+    "AuthenticationError",
+    "AuthorizationError",
+    "ValidationError",
+    "ToolError",
+    "AgentError",
+    "TaskError",
+    "BrowserError",
+    "IntegrationError",
+    "RateLimitError",
+    "TimeoutError",
+    "SecurityError",
+    "SandboxError",
+    "NotFoundError",
+    "RegistrationError",
+    "ExecutionError",
+]
+
+

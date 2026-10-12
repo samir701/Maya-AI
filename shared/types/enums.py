@@ -1,0 +1,174 @@
+"""Shared Enumerations across ZETTA Architecture."""
+
+from enum import Enum
+
+
+class TaskStatus(str, Enum):
+    CREATED = "CREATED"
+    QUEUED = "QUEUED"
+    RUNNING = "RUNNING"
+    COMPLETED = "COMPLETED"
+    FAILED = "FAILED"
+    CANCELLED = "CANCELLED"
+
+
+class PermissionLevel(str, Enum):
+    LOW = "LOW"
+    MEDIUM = "MEDIUM"
+    HIGH = "HIGH"
+    CRITICAL = "CRITICAL"
+
+
+class EventType(str, Enum):
+    APP_STARTED = "APP_STARTED"
+    APP_STOPPED = "APP_STOPPED"
+
+    TASK_CREATED = "TASK_CREATED"
+    TASK_STARTED = "TASK_STARTED"
+    TASK_COMPLETED = "TASK_COMPLETED"
+    TASK_FAILED = "TASK_FAILED"
+    TASK_CANCELLED = "TASK_CANCELLED"
+
+    AGENT_STARTED = "AGENT_STARTED"
+    AGENT_COMPLETED = "AGENT_COMPLETED"
+    AGENT_FAILED = "AGENT_FAILED"
+
+    TOOL_STARTED = "TOOL_STARTED"
+    TOOL_COMPLETED = "TOOL_COMPLETED"
+    TOOL_FAILED = "TOOL_FAILED"
+
+    USER_CONFIRMATION_REQUIRED = "USER_CONFIRMATION_REQUIRED"
+    CONFIRMATION_REQUESTED = "CONFIRMATION_REQUESTED"
+
+    # AI Core Events
+    AI_REQUEST_STARTED = "AI_REQUEST_STARTED"
+    AI_REQUEST_COMPLETED = "AI_REQUEST_COMPLETED"
+    AI_REQUEST_FAILED = "AI_REQUEST_FAILED"
+    AI_STREAM_STARTED = "AI_STREAM_STARTED"
+    AI_STREAM_COMPLETED = "AI_STREAM_COMPLETED"
+
+    # Memory Events
+    MEMORY_CREATED = "MEMORY_CREATED"
+    MEMORY_UPDATED = "MEMORY_UPDATED"
+    MEMORY_RETRIEVED = "MEMORY_RETRIEVED"
+    MEMORY_DELETED = "MEMORY_DELETED"
+    MEMORY_EXPIRED = "MEMORY_EXPIRED"
+    MEMORY_CONSOLIDATED = "MEMORY_CONSOLIDATED"
+
+    # Interaction Events
+    SESSION_CREATED = "SESSION_CREATED"
+    SESSION_CLOSED = "SESSION_CLOSED"
+    USER_MESSAGE_RECEIVED = "USER_MESSAGE_RECEIVED"
+    ASSISTANT_RESPONSE_GENERATED = "ASSISTANT_RESPONSE_GENERATED"
+
+    # Voice & Audio Events (Phase 07)
+    VOICE_SESSION_STARTED = "VOICE_SESSION_STARTED"
+    VOICE_SESSION_STOPPED = "VOICE_SESSION_STOPPED"
+    VOICE_RECORDING_STARTED = "VOICE_RECORDING_STARTED"
+    VOICE_RECORDING_STOPPED = "VOICE_RECORDING_STOPPED"
+    VOICE_SPEECH_DETECTED = "VOICE_SPEECH_DETECTED"
+    VOICE_TRANSCRIPTION_STARTED = "VOICE_TRANSCRIPTION_STARTED"
+    VOICE_TRANSCRIPTION_COMPLETED = "VOICE_TRANSCRIPTION_COMPLETED"
+    VOICE_SYNTHESIS_STARTED = "VOICE_SYNTHESIS_STARTED"
+    VOICE_SYNTHESIS_COMPLETED = "VOICE_SYNTHESIS_COMPLETED"
+
+    # Agent & Planning Events (Phase 08)
+    AGENT_PAUSED = "AGENT_PAUSED"
+    AGENT_RESUMED = "AGENT_RESUMED"
+    AGENT_CANCELLED = "AGENT_CANCELLED"
+    PLAN_CREATED = "PLAN_CREATED"
+    PLAN_STARTED = "PLAN_STARTED"
+    PLAN_COMPLETED = "PLAN_COMPLETED"
+    PLAN_FAILED = "PLAN_FAILED"
+    SUBTASK_STARTED = "SUBTASK_STARTED"
+    SUBTASK_COMPLETED = "SUBTASK_COMPLETED"
+    SUBTASK_FAILED = "SUBTASK_FAILED"
+    SKILL_LOADED = "SKILL_LOADED"
+    SKILL_EXECUTED = "SKILL_EXECUTED"
+    WORKFLOW_STARTED = "WORKFLOW_STARTED"
+    WORKFLOW_COMPLETED = "WORKFLOW_COMPLETED"
+
+
+class AIProviderType(str, Enum):
+    OPENAI = "openai"
+    GEMINI = "gemini"
+    ANTHROPIC = "anthropic"
+    GROQ = "groq"
+    LOCAL = "local"
+    FAKE = "fake"
+    DEMO = "demo"
+
+
+class AIRole(str, Enum):
+    SYSTEM = "system"
+    USER = "user"
+    ASSISTANT = "assistant"
+    TOOL = "tool"
+
+
+class MemoryType(str, Enum):
+    SHORT_TERM = "short_term"
+    LONG_TERM = "long_term"
+    EPISODIC = "episodic"
+    SEMANTIC = "semantic"
+
+
+class MemorySource(str, Enum):
+    USER_EXPLICIT = "user_explicit"
+    CONVERSATION = "conversation"
+    TASK = "task"
+    SYSTEM = "system"
+    IMPORTED = "imported"
+    DERIVED = "derived"
+
+
+class MemorySensitivity(str, Enum):
+    PUBLIC = "public"
+    NORMAL = "normal"
+    PRIVATE = "private"
+    SENSITIVE = "sensitive"
+
+
+class AgentStatus(str, Enum):
+    CREATED = "CREATED"
+    READY = "READY"
+    RUNNING = "RUNNING"
+    WAITING = "WAITING"
+    COMPLETED = "COMPLETED"
+    FAILED = "FAILED"
+    CANCELLED = "CANCELLED"
+    PAUSED = "PAUSED"
+
+
+class AgentCapability(str, Enum):
+    GENERAL = "general"
+    CODING = "coding"
+    BROWSER = "browser"
+    RESEARCH = "research"
+    DOCUMENT = "document"
+    COMPUTER = "computer"
+    VISION = "vision"
+    VOICE = "voice"
+    ACCESSIBILITY = "accessibility"
+    AUTONOMOUS = "autonomous"
+
+
+class PlanStatus(str, Enum):
+    DRAFT = "DRAFT"
+    PLANNED = "PLANNED"
+    EXECUTING = "EXECUTING"
+    COMPLETED = "COMPLETED"
+    FAILED = "FAILED"
+    CANCELLED = "CANCELLED"
+
+
+class PersonaType(str, Enum):
+    DEFAULT = "default"
+    PROFESSIONAL = "professional"
+    CREATIVE = "creative"
+
+
+class VoiceAuthLevel(str, Enum):
+    AUTHORIZED = "AUTHORIZED"
+    UNKNOWN = "UNKNOWN"
+    RESTRICTED = "RESTRICTED"

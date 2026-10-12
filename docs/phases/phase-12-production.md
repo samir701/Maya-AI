@@ -1,6 +1,6 @@
-# Phase 12: Production Packaging & Release
+# Production Readiness & UI Layer
 
-## Status: NOT STARTED
+## Status: NEXT MILESTONE: ZETTA UI & PRESENTATION LAYER
 
-## Objective
-Finalize cross-platform desktop UI bundling, background service daemon installation, auto-updater mechanism, and production distribution packages.
+## Architecture Note
+Phase 08 is the final backend capability phase. The subsequent milestone is the real ZETTA product UI and presentation experience, which will consume the stable Phase 00–08 backend APIs.
